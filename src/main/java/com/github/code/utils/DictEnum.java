@@ -9,7 +9,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 
-import static com.harmonycloud.common.Constant.CommonConstant.*;
+import static com.github.code.utils.CommonConstant.*;
 
 public enum DictEnum {
 
