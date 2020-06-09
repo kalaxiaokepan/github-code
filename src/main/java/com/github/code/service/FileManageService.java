@@ -10,6 +10,9 @@ package com.github.code.service;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.List;
 
 /**
  * <功能简要> <br>
@@ -24,4 +27,13 @@ public interface FileManageService {
     public String upload(MultipartFile file);
 
     String download(String fileName, HttpServletResponse response);
+
+    /**
+     * 文件分割
+     * @param fileName
+     * @return
+     */
+    List<String> cutFile(String fileName);
+
+    String merageFile(String cutFileName, int chunks) throws FileNotFoundException, IOException;
 }
